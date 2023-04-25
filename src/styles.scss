@@ -1,0 +1,32 @@
+// Partials
+@use "./styles/" as *;
+
+//Component Sheets
+@use "./components/Items";
+@use "./components/Form";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	font-family: $font-body;
+	color: $color-font-light;
+	font-weight: 600;
+}
+
+body {
+	background-color: $color-bg;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#App {
+	padding-top: 30px;
+	width: 500px;
+
+	button {
+		@include btn-basic;
+	}
+}

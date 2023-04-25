@@ -1,0 +1,80 @@
+@use "../styles/" as *;
+
+h2 {
+	text-align: center;
+}
+
+.ItemList {
+	li {
+		display: grid;
+		grid-template-columns: 1fr 10fr 1fr 1fr;
+		row-gap: 10px;
+
+		justify-items: baseline;
+		align-items: center;
+
+		padding: 0.5em;
+		margin: 5px;
+		border-radius: 8px;
+		background-color: $colour-primary;
+
+		input {
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			justify-self: center;
+		}
+
+		.checkBox {
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			justify-self: center;
+
+			cursor: pointer;
+
+			outline: solid 2px;
+			outline-offset: 2px;
+			outline-color: $color-font-light;
+
+			&:hover {
+				background-color: $color-font-light;
+			}
+		}
+
+		p {
+			word-break: break-all;
+			margin: 0.2em 0.5em;
+			line-height: 1.5em;
+			font-size: 14px;
+		}
+
+		svg {
+			cursor: pointer;
+			justify-self: center;
+
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+	}
+
+	.complete {
+		background-color: lighten($colour-primary, 20%);
+
+		p {
+			color: $colour-primary;
+			text-decoration: line-through;
+			text-decoration-thickness: 2px;
+		}
+
+		.checkBox {
+			outline-color: $colour-secondary;
+			background-color: $colour-secondary;
+
+			&:hover {
+				background-color: $colour-secondary;
+			}
+		}
+	}
+}

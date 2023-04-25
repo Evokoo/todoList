@@ -1,0 +1,15 @@
+@use "./colours" as *;
+
+@mixin btn-basic {
+	color: $color-font-dark;
+	cursor: pointer;
+	background-color: $colour-secondary;
+	outline: none;
+	border: none;
+	padding: 0.3em 0.4em;
+	border-radius: 8px;
+
+	&:hover {
+		background-color: darken($colour-secondary, 20%);
+	}
+}
